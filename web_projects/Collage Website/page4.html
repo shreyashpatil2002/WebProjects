@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvard University - Login</title>
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: all .5s;
+        }
+        /* main styling */
+        main {
+            width: 100%;
+            height: 100vh;
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: montserrat;
+        }
+
+        .center {
+            position: relative;
+            width: 420px;
+            background: white;
+            border-radius: 10px;
+            margin-top: 25px;
+            padding: 13px;
+        }
+
+        .Login {
+            display: none;
+        }
+
+        .center h1 {
+            text-align: center;
+            padding: 0 0 20px 0;
+            border-bottom: 1px solid silver;
+        }
+
+        .center form {
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        form .txt_field {
+            position: relative;
+            border-bottom: 2px solid #adadad;
+            margin: 30px 0;
+        }
+
+        .txt_field input {
+            width: 100%;
+            padding: 0 5px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        .txt_field label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            color: #adadad;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .txt_field span::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #2691d9;
+            transition: .5s;
+        }
+
+        .txt_field input:focus~label,
+        .txt_field input:valid~label {
+            top: -5px;
+            color: #2691d9;
+        }
+
+        .txt_field input:focus~span::before,
+        .txt_field input:valid~span::before {
+            width: 100%;
+        }
+
+        .pass {
+            margin: -5px 0 20px 5px;
+            color: #a6a6a6;
+            cursor: pointer;
+        }
+
+        .pass:hover {
+            text-decoration: underline;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            height: 50px;
+            border: 1px solid;
+            background: #2691d9;
+            border-radius: 25px;
+            color: #e9f4fb;
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+        }
+
+        input[type="submit"]:hover {
+            border-color: #2691d9;
+            transition: .5s;
+        }
+
+        .signup_link {
+            margin: 30px 0;
+            text-align: center;
+            font-size: 16px;
+            color: #666666;
+        }
+
+        .signup_link a {
+            color: #2691d9;
+            text-decoration: none;
+        }
+
+        .signup_link a:hover {
+            text-decoration: underline;
+        }
+
+        #something {
+            display: none;
+            margin: auto;
+            text-align: center;
+        }
+
+        @keyframes come {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="center Login">
+            <h1>Login</h1>
+            <form action="../index.html" id="login_form">
+                <div class="txt_field">
+                    <input type="text" id="Username" autocomplete="off" required>
+                    <span></span>
+                    <label>Username</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" id="Password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div class="pass">
+                    Forgot Password ?
+                </div>
+                <a href="../index.html">
+                    <input type="submit" value="Login" id="login" href="../index.html"></a>
+                <div class="signup_link">
+                    Not a member? <a href="#" id="signup_btn">Signup</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="center Register">
+            <h1>Register</h1>
+            <form action="../index.html" id="register_form">
+                <div class="txt_field">
+                    <input type="text" id="New_Username" autocomplete="off" required>
+                    <span></span>
+                    <label>Enter Name</label>
+                </div>
+                <div class="txt_field">
+                    <input type="email" id="email" autocomplete="off" required>
+                    <span></span>
+                    <label>Email Id</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" id="New_Password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" id="Conf_Password" required>
+                    <span></span>
+                    <label>Confirm Password</label>
+                </div>
+                <input type="submit" value="Signup" id="SignUp" href="../index.html">
+                <div class="signup_link">
+                    already a member? <a href="#" id="login_btn">Login</a>
+                </div>
+            </form>
+        </div>
+
+        <div id="something">
+            <h1>Thank You !</h1>
+        </div>
+    </main>
+
+    <script>
+
+        //pages
+        let login_page = document.querySelector('.Login')
+        let signUp_page = document.querySelector('.Register')
+
+        //buttons
+        const login_btn = document.getElementById('login_btn')
+        const signUp_btn = document.getElementById('signup_btn')
+
+        login_btn.onclick = () => {
+            signUp_page.style.display = 'none';
+            login_page.style.display = 'block';
+        }
+        signUp_btn.onclick = () => {
+            signUp_page.style.display = 'block';
+            login_page.style.display = 'none';
+        }
+
+        let newUser = document.querySelector('#New_Username')
+        let newemail = document.querySelector('#email')
+        let newpass = document.querySelector('#New_Password')
+        let confipass = document.querySelector('#Conf_Password')
+        let signin = document.querySelector('#SignUp')
+        let login_form = document.querySelector('#login_form')
+
+        signin.onclick = () => {
+            if (newpass.value === confipass.value) {
+                login_form.setAttribute('action', '../index.html')
+            }
+            else {
+                alert('password does not match')
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

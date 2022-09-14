@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvard University</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .hero::after {
+            content: '';
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(transparent, rgba(57, 124, 136, 0.795));
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .container2 {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: 26%;
+            min-width: 26%;
+            height: auto;
+            background: rgba(255, 255, 255, 0.486);
+            padding: 15px 20px;
+            border-radius: 16px;
+            box-shadow: 0px 2px 6px 0px #555;
+            z-index: 20;
+            cursor: pointer;
+        }
+
+        .card_1 img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+
+        .card_2 a {
+            width: 100%;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .card_2 a:hover {
+            text-decoration: underline;
+        }
+
+        .card h3 {
+            font-size: 25px;
+        }
+
+        .pages {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+
+        .pages button {
+            padding: 8px 15px;
+            outline: none;
+            border: none;
+            color: rgb(0, 0, 0);
+            border-radius: 0px;
+            background: #eee;
+            cursor: pointer;
+            margin: 0 5px;
+            box-shadow: 0px 2px 5px 0px #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="container2">
+            <div class="card card_1">
+                <img src="images/zhanhui-li-1iuxWsIZ6ko-unsplash.jpg" alt="an image">
+                <h3>History</h3>
+                <font>Harvard was established in 1636 by vote of the Great and General Court of the Massachusetts Bay
+                    Colony. In 1638, it acquired British North America's first known printing press.[19][20] In 1639, it
+                    was named Harvard College after deceased clergyman John Harvard, an alumnus of the University of
+                    Cambridge who had left the school £779 and his library of some 400 volumes.[21] The charter creating
+                    the Harvard Corporation was granted in 1650.</font>
+            </div>
+            <div class="card card_2">
+                <h3>Campuses</h3>
+                <a
+                    href="https://d3vgmmrg377kge.cloudfront.net/about/PublishingImages/campus-donors/hbs_aerial_shot_philanthroopy_home_640x360.jpg">Click
+                    Here To open Image</a></br>
+                <font>Harvard's 209-acre (85 ha) main campus is centered on Harvard Yard ("the Yard") in Cambridge,
+                    about 3 miles (5 km) west-northwest of downtown Boston, and extends into the surrounding Harvard
+                    Square neighborhood. The Yard contains administrative offices such as University Hall and
+                    Massachusetts Hall; libraries such as Widener, Pusey, Houghton, and Lamont; and Memorial Church.
+                </font>
+            </div>
+            <div class="card card_3">
+                <h3>In 19<sup>th</sup> Century</h3>
+                <a
+                    href="https://upload.wikimedia.org/wikipedia/commons/5/53/A_Westerly_View_of_the_Colledges_in_Cambridge_New_England_by_Paul_Revere.jpeg"><img
+                        src="images/mini.jpeg" width="100px" alt="an secod image"></a></br>
+                <font>In the 19th century, Enlightenment ideas of reason and free will were widespread among
+                    Congregational ministers, putting those ministers and their congregations in tension with more
+                    traditionalist, Calvinist parties. When Hollis Professor of Divinity David Tappan died in 1803 and
+                    President Joseph Willard died a year later, a struggle broke out over their replacements. Henry Ware
+                    was elected to the Hollis chair in 1805, and the liberal Samuel Webber was appointed to the
+                    presidency two years later, signaling the shift from the dominance of traditional ideas at Harvard
+                    to the dominance of liberal, Arminian ideas.</font>
+            </div>
+        </div>
+        <div class="pages">
+            <a href="index.html"><button>Privious Page</button></a>
+            <a href="page3.html"><button>Next Page</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
