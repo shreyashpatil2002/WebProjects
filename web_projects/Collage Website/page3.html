@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havard University - Table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(172, 172, 172, 0.24);
+        }
+
+        table {
+            border: 1px solid;
+            border-collapse: collapse;
+            font-weight: 600;
+        }
+
+        th,
+        td {
+            padding: 5px 20px;
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        .content {
+            padding: 15px;
+            box-shadow: 0px 4px 15px 0px #444;
+            border-radius: 5px;
+            background: rgb(255, 255, 255);
+            animation: come 1s ease-in-out;
+        }
+        h1 {
+            margin-bottom: 15px;
+            font-size: 55px;
+            animation: come 1s ease-in-out;
+        }
+        @keyframes come {
+            from {
+                transform: translateY(-150px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+            .pages {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+
+        .pages button {
+            padding: 8px 15px;
+            outline: none;
+            border: none;
+            color: rgb(0, 0, 0);
+            border-radius: 0px;
+            background: #eee;
+            cursor: pointer;
+            margin: 0 5px;
+            box-shadow: 0px 2px 5px 0px #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Our Popular Cources</h1>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Duration</th>
+                        <th>Fees</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CS50's Intoduction to game Devlopment</td>
+                        <td>12 Weeks</td>
+                        <td>Free*</td>
+                    </tr>
+                    <tr>
+                        <td>PredictionX: Lost Without Longitude</td>
+                        <td>1 Weeks</td>
+                        <td>Free*</td>
+                    </tr>
+                    <tr>
+                        <td>Public Leadership Credential</td>
+                        <td>12 Weeks</td>
+                        <td>$995<sup>+</sup></td>
+                    </tr>
+                    <tr>
+                        <td>CS50's Intoduction to Computer Science</td>
+                        <td>11 Weeks</td>
+                        <td>Free*</td>
+                    </tr>
+                    <tr>
+                        <td>Improving your Memory</td>
+                        <td>2 Weeks</td>
+                        <td>$30</td>
+                    </tr>
+                    <tr>
+                        <td>CS50's for Lawyers</td>
+                        <td>10 Weeks</td>
+                        <td>Free*</td>
+                    </tr>
+                    <tr>
+                        <td>CS50's Intoduction to AI with Python</td>
+                        <td>7 Weeks</td>
+                        <td>Free*</td>
+                    </tr>
+                    <tr>
+                        <td>Systematic Approaches to Policy Design</td>
+                        <td>10 Weeks</td>
+                        <td>Free*</td>
+                    </tr>
+                    <tr>
+                        <td>Religion, Conflict and Peace</td>
+                        <td>8 Weeks</td>
+                        <td>Free*</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="pages">
+        <a href="index.html"><button>Home Page</button></a>
+        <a href="page2.html"><button>Privious Page</button></a>
+        <a href="page4.html"><button>Next Page</button></a>
+    </div>
+</body>
+
+</html>

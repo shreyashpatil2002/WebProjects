@@ -141,11 +141,28 @@
         .signup_link a:hover {
             text-decoration: underline;
         }
+        .pages {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
 
-        #something {
-            display: none;
-            margin: auto;
-            text-align: center;
+        .pages button {
+            padding: 8px 15px;
+            outline: none;
+            border: none;
+            color: rgb(0, 0, 0);
+            border-radius: 0px;
+            background: #eee;
+            cursor: pointer;
+            margin: 0 5px;
+            box-shadow: 0px 2px 5px 0px #555;
         }
 
         @keyframes come {
@@ -215,9 +232,8 @@
                 </div>
             </form>
         </div>
-
-        <div id="something">
-            <h1>Thank You !</h1>
+        <div class="pages">
+            <a href="page3.html"><button>Privious Page</button></a>
         </div>
     </main>
 
