@@ -70,7 +70,7 @@ li:hover {
 main {
     width: 100%;
     height: 100%;
-    background-image: url(images/flight/back-flight.jpg);
+    background-image: url(images/flights_image.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -88,16 +88,18 @@ main::after{
     background-color: rgba(0, 0, 0, 0.13);
 }
 main .content {
-    width: 50%;
-    height: 50%;
-    background: rgba(255, 255, 255, 0.267);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(0, 0, 0), transparent);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
     padding: 20px;
     cursor: pointer;
     z-index: 5;
     overflow-y: hidden;
+    color: #fff;
 }
 main .content a{
     margin: 10px;
